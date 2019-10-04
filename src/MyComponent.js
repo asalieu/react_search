@@ -27,6 +27,7 @@ componentDidMount(){
 
           }, 600); 
     }  
+    //this is the main render function which retuns the view
     render(){   
         return(  
                 <React.Fragment>
