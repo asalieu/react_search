@@ -6,10 +6,10 @@ const app= express();
 const selectAlltemperatures= "select id, unit_id, temperature,unix_timestamp from measurements order by unix_timestamp desc limit 5";
 const averagetep ="select avg(temperature) as avg from measurements"; 
 const connection=mysql.createConnection({
-    host:'localhost',
-    user:'root',
-    password:'',
-    database:'nodejs'
+    host: env.SERVER_IP,
+    user: env.USER,
+    password: env.PASS,
+    database: env.DB_NAME
 });
 connection.connect(err=>{
     if(err){
